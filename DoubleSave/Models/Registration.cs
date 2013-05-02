@@ -12,5 +12,7 @@ namespace DoubleSave.Models
         public string RegistrationConfirmation { get; set; }
         [Display(Name = "Payment Confirmation #")]
         public string PaymentConfirmation { get; set; }
+
+        public bool HasPosted { get; set; }
     }
 }

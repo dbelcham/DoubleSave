@@ -22,7 +22,7 @@ namespace DoubleSave.Controllers
 
                 registration.PaymentConfirmation = confirmationStuff.PaymentConfirmation;
                 registration.RegistrationConfirmation = confirmationStuff.RegistrationConfirmation;
-
+                registration.HasPosted = true;
                 return View("Confirmation", registration);
             }
 

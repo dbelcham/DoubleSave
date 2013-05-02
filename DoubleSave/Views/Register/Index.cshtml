@@ -20,6 +20,15 @@
                   @Html.TextBoxFor(x=>x.CreditCardNumber)<br/>
                   <input type="submit" value="Save"/>
               }
+            <p>Note the URL here /Register (with the implied /Index after it). Save and then look at the URL. It will be the same. 
+                Hit F5 to refresh the Confirmation view and you will find that the POST is called again (different GUIDS will display). 
+                We don't want this to happen when the user refreshes the Confirmation view.</p>
+            
+            <p>The Confirmation page needs to receive two different pieces of data <b>without</b> making any more calls to a service or database. Those two things are:</p>
+            <ol><li>The entries the user makes above on this page</li><li>Multiple confirmation values that are returned from the external service call that is in the POST method currently in the controller</li></ol>
+            <p>The main things that <b>can't</b> be included in the solution are:</p>
+            <ul><li>SessionState - we don't have the capability to properly manage it in a multi-server farm</li><li>Database tables/saves - we don't have an appliation specific database at this time</li></ul>
+            <p>The essence of what we need to do is mimic session state without breaking these constraints.</p>
         </div>
     </body>
 </html>
