@@ -1,0 +1,29 @@
+﻿@model DoubleSave.Models.Registration
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Confirmation</title>
+    </head>
+    <body>
+        <div>
+            <fieldset>
+                <legend>Confirmation</legend>
+                @Html.LabelFor(x=>x.Name)<br/>
+                @Html.DisplayFor(x=>x.Name)<br/>
+                @Html.LabelFor(x=>x.CreditCardNumber)<br/>
+                @Html.DisplayFor(x=>x.CreditCardNumber)<br/>
+                @Html.LabelFor(x=>x.RegistrationConfirmation)<br/>
+                @Html.DisplayFor(x=>x.RegistrationConfirmation)<br/>
+                @Html.LabelFor(x=>x.PaymentConfirmation)<br/>
+                @Html.DisplayFor(x=>x.PaymentConfirmation)<br/>
+
+            </fieldset>
+        </div>
+    </body>
+</html>

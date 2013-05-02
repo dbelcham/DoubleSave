@@ -1,0 +1,25 @@
+﻿@model DoubleSave.Models.Registration
+
+@{
+    Layout =null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Save</title>
+    </head>
+    <body>
+        <div>
+              @using (Html.BeginForm("Index", "Register"))
+              {
+                  @Html.LabelFor(x=>x.Name)<br/>
+                  @Html.TextBoxFor(x=>x.Name)<br/>
+                  @Html.LabelFor(x=>x.CreditCardNumber)<br/>
+                  @Html.TextBoxFor(x=>x.CreditCardNumber)<br/>
+                  <input type="submit" value="Save"/>
+              }
+        </div>
+    </body>
+</html>
